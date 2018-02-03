@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<p>Music Hackathon Tokyo 2018</p>
+
+<p>curl http://ipアドレス/api?cmd=パラメータ</p>
+<input id="inputParam" value="ff0000">
+<button id="btnSend">send</button>
+<a href="/api?cmd=hoge"> </a>
+
+<script>
+    var btn = document.getElementById('btnSend');
+    btn.addEventListener('click', function(){
+      var param = document.getElementById('inputParam').value;
+      //window.location.href = '/api?cmd=' + param;
+      window.open('/api?cmd=' + param);
+    })
+</script>
+</body>
+</html>
