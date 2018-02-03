@@ -6,7 +6,7 @@ var fs = require('fs');
 router.get('/', function(req, res, next) {
   // 送信例    curl http://IP/api?cmd=hogehoge
   var filePath = '/tmp/led';
-  var data = req.query.cmd;
+  var data = req.query.cmd + '\n';
   res.send('data was ' + data);
   fs.writeFile(filePath, data, function(err) {
     if(err) {
